@@ -8,3 +8,8 @@
 5. If you are on the project repository, you can find the differences between the current repositoy and your new changes in github desktop application.
 6. On the left hand side, you can see - update fileName.txt, description and commit options.
 7. Give a brief explanation about what the changes are and click on commit to main.
+
+8. Once you commit, you get the option to push origin, click on it. On top, you should see Fetch origin after that, click on it.
+9. Your code is now committed.
+
+Note - before committing your code, always save your changes to a backup folder and click on Fetch Origin to avoid code push conflicts.
