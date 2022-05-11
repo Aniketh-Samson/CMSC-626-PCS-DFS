@@ -1,15 +1,19 @@
 # CMSC-626-PCS-DFS
 
-# Committing to the repository
-1. Open the github link provided.
-2. Click on the green button - CODE, it will open a drop down and you can click on open in github desktop(download github desktop and login if you don't have one)
-3. Once you login to git desktop, you can clone the repository to a certain file location on the system.
-4. Open the cloned repo from your own system and once you make changes to the required files, save them and open github desktop again.
-5. If you are on the project repository, you can find the differences between the current repositoy and your new changes in github desktop application.
-6. On the left hand side, you can see - update fileName.txt, description and commit options.
-7. Give a brief explanation about what the changes are and click on commit to main.
+# Architecture of Distributed File System
+1. This setup consists of 3 Storage Servers namely(ServerA, ServerB and ServerC)
+2. It also consists of a Master Server which processes all requests.
+3. It serves multiple instances of clients.
 
-8. Once you commit, you get the option to push origin, click on it. On top, you should see Fetch origin after that, click on it.
-9. Your code is now committed.
+# Code changes to be made before running the code
+1. In each storage server file(ServerA, ServerB and ServerC), replace the path "path = 'C:/Users/samso/OneDrive/Desktop/ALL_DOCS/UMBC/PCS/Trial3'" with the current file location.
+2. Make note of the ports being used in each file (Eg: ServerA.py - Port = 54321) and make sure they match Line 13 in Master.py(Storageport_A = [54321, 64321, 1237]). (if the Storage server ports are changed, change them in master.py respectively)
+3. Make sure that the port on the Client.py and the Master.py are the same.
+4. If you are deploying the storage servers and the master on different systems, make sure that you change Line 9 in Master.py(StorageServer = '0.0.0.0') to whatever the IPv4 address of the system running the storage servers(ServerA, ServerB and ServerC).
 
-Note - before committing your code, always save your changes to a backup folder and click on Fetch Origin to avoid code push conflicts.
+# Deploying the code
+1. To run the system, run the following commands on multiple command prompts from the respective file directories.
+2. To run ServerA, open the command prompt in the file directory containing ServerA.py and execute 'python ServerA.py'
+3. Similarly, run 'python ServerB.py' and 'python ServerC.py' in their respective command prompts.
+4. To run the master, open the command prompt in the file directory containing Master.py and execute 'python Master.py'
+5. Once these files are running, Client.py can be run by executing 'python Client.py'
